@@ -1,0 +1,7 @@
+# Never commit secrets
+*.secrets
+.secrets/
+
+# zsh cache/compiled files
+*.zwc
+.zcompdump*
