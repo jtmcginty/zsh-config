@@ -5,3 +5,18 @@
 # zsh cache/compiled files
 *.zwc
 .zcompdump*
+
+# Editor
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Stray ZDOTDIR symlinks — tracked in parent dotfiles repo, not here
+.zshrc
+.zprofile
+.zsh_history
+
+# detect-secrets baseline — committed, not ignored
+!.secrets.baseline
