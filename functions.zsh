@@ -1,24 +1,9 @@
 # functions.zsh
+# Functions use _name internally to avoid alias conflicts.
+# Aliases in aliases.zsh point to these so they show up in `alias` output.
 
-# ── tmux bell — ring bell after long-running commands (triggers session-dots indicator) ──
-_bell_preexec() {
-  _cmd_start=$SECONDS
-}
-
-_bell_precmd() {
-  local duration=$(( SECONDS - ${_cmd_start:-$SECONDS} ))
-  if (( duration >= 10 )); then
-    printf '\a'
-  fi
-  unset _cmd_start
-}
-
-autoload -Uz add-zsh-hook
-add-zsh-hook preexec _bell_preexec
-add-zsh-hook precmd _bell_precmd
-
-# ── search — fuzzy search file contents with live reload ─────────────────────
-search() {
+# ── _search — fuzzy search file contents with live reload ────────────────────
+_search() {
   fzf --ansi --disabled \
     --bind "change:reload:rg --files-with-matches --ignore-case {q} . || true" \
     --bind "enter:execute(nvim {})" \
@@ -31,9 +16,9 @@ search() {
       fi"
 }
 
-# ── gi — generate .gitignore via gitignore.io ─────────────────────────────────
+# ── _gi — generate .gitignore via gitignore.io ────────────────────────────────
 # usage: gi python,node,macos
-gi() {
+_gi() {
   curl -sLw "\n" "https://www.toptal.com/developers/gitignore/api/$*"
 }
 

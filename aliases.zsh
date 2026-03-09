@@ -2,12 +2,12 @@
 
 # ── Navigation ────────────────────────────────────────────────────────────────
 alias ..="cd .."
-alias ...="cd ../.."        # fixed: ../../ is not a valid alias name
-alias ....="cd ../../.."    # fixed: ../../../ is not a valid alias name
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # ── Shell ─────────────────────────────────────────────────────────────────────
 alias x="exit"
-alias reload="exec zsh"     # exec zsh starts a fresh shell — cleaner than sourcing
+alias reload="exec zsh"
 
 # ── Listing ───────────────────────────────────────────────────────────────────
 alias ll="exa -bghHliS"
@@ -38,6 +38,8 @@ alias ai='ollmcp \
   --model my-coder \
   --servers-json ~/.config/ollmcp/mcp-servers/config.json'
 
-# ── Function aliases (makes them visible in `alias` output) ──────────────────
-alias search=search
-alias gi=gi
+# ── Function aliases ──────────────────────────────────────────────────────────
+# These point to underscore-prefixed functions in functions.zsh.
+# Defined as aliases so they appear in `alias` output as a reminder they exist.
+alias search='_search'
+alias gi='_gi'
