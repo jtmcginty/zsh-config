@@ -36,5 +36,6 @@ fi
 
 # terraform
 if command -v terraform &>/dev/null; then
+  autoload -Uz bashcompinit && bashcompinit
   complete -o nospace -C terraform terraform
 fi
