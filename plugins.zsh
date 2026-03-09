@@ -3,19 +3,14 @@
 # Everything sourced directly via Homebrew. Faster, more transparent, easier to debug.
 #
 # One-time install:
-#   brew install powerlevel10k
+#   brew install starship
 #   brew install zsh-syntax-highlighting
 #   brew install zsh-autosuggestions
 #   brew install zsh-history-substring-search
 #   brew install direnv
 
-# ── Powerlevel10k instant prompt ──────────────────────────────────────────────
-# Must be near the top of zshrc, before any output. Already handled in zshrc.
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
-# ── Powerlevel10k theme ───────────────────────────────────────────────────────
-source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# ── Starship prompt ───────────────────────────────────────────────────────────
+eval "$(starship init zsh)"
 
 # ── Syntax highlighting — must come before autosuggestions ───────────────────
 source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
