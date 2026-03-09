@@ -1,0 +1,1 @@
+/Users/jackmcginty/dotfiles/zshrc
