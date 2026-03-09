@@ -1,8 +1,10 @@
 # env.zsh
-# Sourced via zshenv — available in ALL zsh contexts including scripts and cron.
-# Only put things that must exist universally. No evals, no slow operations.
+# Sourced via zshenv — available in ALL zsh contexts including scripts, cron,
+# tmux panes, and non-login shells.
+# No PATH manipulation here — macOS path_helper runs after zshenv and would
+# reorder it anyway. PATH is set in path.zsh (zprofile) after path_helper fires.
 
-# ── XDG Base Directories ─────────────────────────────────────────────────────
+# ── XDG Base Directories ──────────────────────────────────────────────────────
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
