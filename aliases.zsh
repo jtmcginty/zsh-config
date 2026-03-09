@@ -10,8 +10,8 @@ alias x="exit"
 alias reload="exec zsh"
 
 # ── Listing ───────────────────────────────────────────────────────────────────
-alias ll="exa -bghHliS"
-alias la="ll -a"
+alias ll="eza --long --icons=auto --header --group-directories-first --git --binary"
+alias la="ll --all"
 
 # ── History ───────────────────────────────────────────────────────────────────
 alias hc="history -c"

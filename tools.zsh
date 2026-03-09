@@ -51,6 +51,9 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
 # ── bat ───────────────────────────────────────────────────────────────────────
 export BAT_THEME="base16"
 
+# ── eza ───────────────────────────────────────────────────────────────────────
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+
 # ── Docker ────────────────────────────────────────────────────────────────────
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
