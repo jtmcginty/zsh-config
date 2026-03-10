@@ -12,10 +12,14 @@ alias reload="exec zsh"
 # ── Listing ───────────────────────────────────────────────────────────────────
 alias ll="eza --long --icons=auto --header --group-directories-first --git --binary"
 alias la="ll --all"
+alias tree='tree -I ".git|node_modules|__pycache__|.venv|venv|.env|build|dist|target|*.egg-info|.DS_Store|.mypy_cache|.pytest_cache|.tox|htmlcov|.cache|.parcel-cache|.next|.nuxt|coverage"'
 
 # ── History ───────────────────────────────────────────────────────────────────
 alias hc="history -c"
 alias hg="history | grep "
+
+# ── tmux ──────────────────────────────────────────────────────────────────────
+alias kb_tmux='grep -E -B1 "^\s*bind(-key)?" ~/.tmux.conf | grep -v "^--$"'
 
 # ── Tools ─────────────────────────────────────────────────────────────────────
 alias tf="terraform"
